@@ -1,12 +1,15 @@
 let today = moment().format("dddd, Do MMMM");
 let currentDayEl = $("#currentDay");
 let scheduleContainer = $(".container");
+let currentHour = getCurrentHour();
 
 function displayDate() {
     currentDayEl.text(today);
 }
 
-
+function getCurrentHour() {
+    return moment().format("H")
+}
 
 function initialiseSchedule() {
     for (let i=9; i<18; i++) {
