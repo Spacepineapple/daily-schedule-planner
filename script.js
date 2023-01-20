@@ -28,11 +28,11 @@ function initialiseSchedule() {
         text.attr("class", "col-10");
         text.val(getSchedule(time));
         if (i<currentHour) {
-            text.addClass("past");
+            row.addClass("past");
         } else if (i>currentHour) {
-            text.addClass("future");
+            row.addClass("future");
         } else {
-            text.addClass("present");
+            row.addClass("present");
         }
         row.append(text);
         let save = $("<div>");
