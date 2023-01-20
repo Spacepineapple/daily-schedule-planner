@@ -36,7 +36,10 @@ function initialiseSchedule() {
         }
         row.append(text);
         let save = $("<div>");
-        save.attr("class", "col-1 saveBtn");
+        save.attr("class", "col-1 saveBtn d-flex justify-content-center align-items-center");
+        let icon = $("<i>");
+        icon.attr("class", "fa-regular fa-floppy-disk");
+        save.append(icon);
         row.append(save);
     }
     $(".saveBtn").on("click", saveSchedule);
