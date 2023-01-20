@@ -26,6 +26,7 @@ function initialiseSchedule() {
         row.append(hour);
         let text = $("<textarea>");
         text.attr("class", "col-10");
+        text.val(getSchedule(time));
         if (i<currentHour) {
             text.addClass("past");
         } else if (i>currentHour) {
@@ -39,6 +40,15 @@ function initialiseSchedule() {
         row.append(save);
     }
     $(".saveBtn").on("click", saveSchedule);
+}
+
+function getSchedule(key) {
+    let description = localStorage.getItem(key);
+    if (description === null) {
+        return "";
+    } else {
+        return description;
+    }
 }
 
 function saveSchedule(event) {
