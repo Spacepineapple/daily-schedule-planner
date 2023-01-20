@@ -26,6 +26,13 @@ function initialiseSchedule() {
         row.append(hour);
         let text = $("<textarea>");
         text.attr("class", "col-10");
+        if (i<currentHour) {
+            text.addClass("past");
+        } else if (i>currentHour) {
+            text.addClass("future");
+        } else {
+            text.addClass("present");
+        }
         row.append(text);
         let save = $("<div>");
         save.attr("class", "col-1 saveBtn");
