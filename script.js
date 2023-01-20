@@ -14,21 +14,21 @@ function initialiseSchedule() {
         } else {
             period = "PM";
         }
-        let timeBlock = $("div");
+        let timeBlock = $("<div>");
         timeBlock.attr("class", "time-block");
-        let row = $("div");
+        let row = $("<div>");
         row.attr("class", "row");
         scheduleContainer.append(timeBlock);
         timeBlock.append(row);
-        let hour = $("div");
+        let hour = $("<div>");
         hour.attr("class", "col-1 hour");
         hour.text(`${i}${period}`);
-        let text = $("textarea");
-        text.attr("class", "col-10");
-        let save = $("div");
-        save.attr("class", "col-10 saveBtn");
         row.append(hour);
+        let text = $("<textarea>");
+        text.attr("class", "col-10");
         row.append(text);
+        let save = $("<div>");
+        save.attr("class", "col-1 saveBtn");
         row.append(save);
     }
 }
