@@ -38,6 +38,15 @@ function initialiseSchedule() {
         save.attr("class", "col-1 saveBtn");
         row.append(save);
     }
+    $(".saveBtn").on("click", saveSchedule);
+}
+
+function saveSchedule(event) {
+    let parentEl = event.target.parentNode;
+    console.log(parentEl);
+    let timeSlot = $(parentEl).children(".hour").text();
+    let description = $(parentEl).children("textarea").val();
+    localStorage.setItem(timeSlot, description);
 }
 
 displayDate();
