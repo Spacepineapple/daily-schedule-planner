@@ -56,7 +56,6 @@ function getSchedule(key) {
 
 function saveSchedule(event) {
     let parentEl = event.target.parentNode;
-    console.log(parentEl);
     let timeSlot = $(parentEl).children(".hour").text();
     let description = $(parentEl).children("textarea").val();
     localStorage.setItem(timeSlot, description);
