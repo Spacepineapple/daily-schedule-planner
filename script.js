@@ -47,9 +47,13 @@ function initialiseSchedule() {
     $(".saveBtn").on("click", saveSchedule);
 }
 
+//Create a timeBlock
 function createTimeBlock(i) {
+    //Create an empty div
     let timeBlock = $("<div>");
+    //Assign it the pre-existing time-block class
     timeBlock.attr("class", "time-block");
+    //Check if hourly label is in past, present or future and assign
     if (i<currentHour) {
         timeBlock.addClass("past");
     } else if (i>currentHour) {
@@ -60,23 +64,35 @@ function createTimeBlock(i) {
     return timeBlock;
 }
 
+//Create an hour area
 function createHour() {
+    //Create an empty div
     let hour = $("<div>");
+    //Make a single bootstrap column and add pre-existing hour class
     hour.attr("class", "col-1 hour");
     return hour;    
 }
 
+//Create a textarea
 function createTextArea() {
+    //Create an empty text area
     let text = $("<textarea>");
+    //Make a bootstrap column taking up 10 of the 12 column spaces
     text.attr("class", "col-10");
     return text;    
 }
 
+//Create a save button
 function createSaveButton() {
+    //Create an empty div
     let save = $("<div>");
+    //Make a bootstrap column, assign existing saveBtn class and centre content
     save.attr("class", "col-1 saveBtn d-flex justify-content-center align-items-center");
+    //Create an icon element
     let icon = $("<i>");
+    //Assign classes to generate font-awesome floppy disk icon
     icon.attr("class", "fa-regular fa-floppy-disk");
+    //Add icon to the save button
     save.append(icon);
     return save;
 }
