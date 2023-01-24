@@ -61,5 +61,19 @@ function saveSchedule(event) {
     localStorage.setItem(timeSlot, description);
 }
 
+function refreshStatus() {
+    $('.time-block').each(function(i) {
+        currentHour = getCurrentHour();
+        if (i+9<currentHour) {
+            $(this).attr("class", "time-block past");
+        } else if (i+9>currentHour) {
+            $(this).attr("class", "time-block future");
+        } else {
+            $(this).attr("class", "time-block present");
+        }
+    });
+}
+
 displayDate();
 initialiseSchedule();
+setInterval(refreshStatus, 1000);
