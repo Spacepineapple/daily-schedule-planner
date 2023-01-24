@@ -17,3 +17,9 @@
 
 ## Credits <a id="credits"></a>
 
+The JavaScript code contained in the script.js file was written entirely by
+myself. However, for this challenge we were provided with all of the content in
+the index.html and style.css files. The content in those files was provided by
+edX as part of their Front End Web Development bootcamp. In addition, this
+project makes use of the Bootstrap framework and JQuery library for which I can
+take no credit.
