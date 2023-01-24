@@ -13,24 +13,37 @@ function getCurrentHour() {
     return moment().format("H")
 }
 
+//Create the time and schedule blocks that make up the calendar
 function initialiseSchedule() {
     //Iterate through times from 9AM to 5PM
     for (let i=9; i<18; i++) {
+        //Create a label in the format iAM/PM
         let time = moment(`${i}`, "h").format("hA");
+        //Create a timeBlock for this hour period
         let timeBlock = createTimeBlock(i);
+        //Create a bootstrap row to hold the schedule elements
         let row = $("<div>");
         row.attr("class", "row");
+        //Add the timeBlock to the schedule area
         scheduleContainer.append(timeBlock);
+        //Add the row to the timeBlock
         timeBlock.append(row);
+        //Create a div and add the time label to it
         let hour = createHour();
         hour.text(`${time}`);
+        //Add the hour to the row
         row.append(hour);
+        //Create a text area and assign saved schedule to it if it exists
         let text = createTextArea();
         text.val(getSchedule(time));
+        //Add the text area to the row
         row.append(text);
+        //Create a save button
         let save = createSaveButton();
+        //Add the save button to the row
         row.append(save);
     }
+    //Add save functionality to save buttons
     $(".saveBtn").on("click", saveSchedule);
 }
 
