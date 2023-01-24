@@ -15,6 +15,15 @@
 
 ## Usage <a id="usage"></a>
 
+This page should load in any modern browser. To use the scheduler, simply open
+the schedule page and click in any of the text areas -- these will be the grey,
+red and green coloured areas between the hour labels and the blue save buttons.
+Having clicked inside these areas, you should be able to add a description of
+your schedule within the text area. Following this, clicking on the save button
+should save any scheduled events to your browser's local storage. Please note
+that as a result, if this page is opened in private browsing/incognito mode,
+scheduled events will not be saved.
+
 ## Credits <a id="credits"></a>
 
 The JavaScript code contained in the script.js file was written entirely by
