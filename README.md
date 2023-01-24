@@ -1,4 +1,4 @@
-# daily-schedule-planner
+# Daily Schedule Planner
 
 ## Table of Contents
 1. [URL](#url)
