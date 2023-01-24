@@ -9,9 +9,16 @@
 
 ## URL <a id="url"></a>
 
+A live version of this page has been deployed at
+https://spacepineapple.github.io/daily-schedule-planner/
+
 ## Description <a id="description"></a>
 
 ## Installation <a id="installation"></a>
+
+All of the required files are included in this repository and no installation
+should be required. The index.html file should render in any modern browser on
+both a desktop or mobile device. 
 
 ## Usage <a id="usage"></a>
 
