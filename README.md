@@ -14,6 +14,38 @@ https://spacepineapple.github.io/daily-schedule-planner/
 
 ## Description <a id="description"></a>
 
+This page was created as my solution to the seventh challenge task of a web
+development bootcamp. For this task, I was provided with starter code including
+the HTML layout for a basic webpage containing a heading and an empty container,
+as well as the CSS styling for the page. My task was to create the JavaScript
+code to create a work day scheduling page. The challenge carried a number of
+criteria and restrictions on how the page should look and act. These included:
+
+1. The page must display the current day at the top of the calender when a user opens the planner.
+2. The page must present timeblocks for standard business hours when the user scrolls down.
+3. The timeblocks in the schedule must be colour coded based on past, present, and future when the timeblock is viewed.
+4. The page must allow a user to enter an event when they click a timeblock.
+5. The page must allow the user to save the event in local storage when the save button is clicked for that timeblock.
+6. The events in the calendar must persist between refreshes of the page.
+
+On first opening index.html or loading the live version of the page, a user
+should see the start screen roughly as follows. Note that depending on the time
+that the page is viewed, individual hourly slots will display in either green,
+red or grey whether they are in the future, present or past relative to the
+current time.
+![Screenshot of the schedule page on initial load](./images/start-screen.png)
+
+A user may click on any of the coloured timeblocks and add text describing their
+schedule. The image below displays examples of schedule text of varying length
+in past, present and future timeslots.
+![Screenshot of the schedule page with scheduled events](./images/with-schedule.png)
+
+Please note that clicking on the blue save buttons will save these schedule
+descriptions to your browser's local storage. As a result, any saved schedule
+events will also be loaded when subsequently accessing the page. The appearance
+of the page after this has been performed will therefore be variable and depend
+on any content which the user has added to the page.
+
 ## Installation <a id="installation"></a>
 
 All of the required files are included in this repository and no installation
